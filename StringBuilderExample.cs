@@ -30,14 +30,18 @@ namespace CSharp_Console_Example
             Console.WriteLine($"[Replace] \"Eunbyeol\"글자를 \"Eunbyeol`s\"로 변경\t:\tsb = {sb}");
 
             sb.Remove(6, 11);
-            string finalString = sb.ToString();
-            Console.WriteLine($"[Remove] 인덱스와 글자 길이로 \"Eunbyeol`s\" 제거\t:\tsb = {finalString}\n");
+            string finalString = sb.ToString(); // string 문자열로 변경
+            Console.WriteLine($"[Remove] 인덱스와 글자 길이로 \"Eunbyeol`s\" 제거\t:\tsb = {finalString}");
+
+            sb.Clear();
+            Console.WriteLine($"[Clear] 모든 내용 제거\t\t\t\t:\tsb = {sb}\n");
 
             StringBuilder sb2 = new StringBuilder();
             sb2.AppendLine("1");
             sb2.AppendLine("2");
             sb2.AppendLine("3");
-            Console.WriteLine($"[AppendLine] 문자 1, 2, 3 각각 줄로 추가하기\nsb\n===\n{sb2}===\n");
+            Console.WriteLine($"[AppendLine] 문자 1, 2, 3 각각 줄로 추가하기\nsb2\n===\n{sb2}===\n");
+
         }
 
         static void InputString()
